@@ -5,7 +5,7 @@ import Layout from './components/Layout';
 import Dashboard from './components/Dashboard';
 import Analytics from './components/Analytics';
 import Locations from './components/Locations';
-import Settings from './components/Settings';
+
 import LandingPage from './components/LandingPage';
 
 // function PrivateRoute({ children, requiredRole }: { children: React.ReactNode, requiredRole?: 'admin' | 'analyst' }) {
@@ -38,11 +38,7 @@ function App() {
             
           } />
           <Route path="locations" element={<Locations />} />  
-          <Route path="settings" element={
-           
-              <Settings />
-            
-          } />
+          
         </Route>
       </Routes>
     </BrowserRouter>
