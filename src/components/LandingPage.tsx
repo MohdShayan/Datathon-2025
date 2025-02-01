@@ -11,7 +11,7 @@ const LandingPage: React.FC = () => {
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center">
               <BarChart3 className="h-8 w-8 text-indigo-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">Retail Analytics</span>
+              <span className="ml-2 text-xl font-bold text-gray-900">SupaRetail</span>
             </div>
             <SignInButton mode="modal">
               <button className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">

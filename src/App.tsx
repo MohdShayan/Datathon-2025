@@ -32,10 +32,10 @@ function App() {
             </SignedOut>
           } />
           
-          <Route path="/" element={
-            <SignedIn>
+          <Route path="/dashboard" element={
+            // <SignedIn>
               <Layout />
-            </SignedIn>
+            //  </SignedIn>
           }>
             <Route index element={<Dashboard />} />
             <Route path="analytics" element={

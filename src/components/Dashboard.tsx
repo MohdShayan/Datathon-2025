@@ -31,7 +31,7 @@ const Dashboard: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Welcome back, {user?.firstName}!</h1>
+              <h1 className="text-2xl font-bold text-gray-900">Welcome {user?.firstName}!</h1>
               <p className="text-sm text-gray-500">Here's what's happening with your stores today.</p>
             </div>
             <div className="flex items-center space-x-4">

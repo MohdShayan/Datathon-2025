@@ -19,7 +19,7 @@ const Layout: React.FC = () => {
       {/* Sidebar */}
       <div className="w-64 bg-white shadow-lg">
         <div className="h-16 flex items-center px-6 border-b">
-          <h1 className="text-xl font-bold text-indigo-600">Retail Analytics</h1>
+          <h1 className="text-xl font-bold text-indigo-600">SupaRetail</h1>
         </div>
         <div className="p-4 border-b">
           <div className="flex items-center">
