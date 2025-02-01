@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import Dashboard from './components/Dashboard';
 import Analytics from './components/Analytics';
 import Locations from './components/Locations';
+import Form1 from './components/Form1';
 
 import LandingPage from './components/LandingPage';
 
@@ -24,7 +25,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={isSignedIn ? <Navigate to="/dashboard" replace /> : <LandingPage />} />
+        <Route path="/" element={isSignedIn ? <Navigate to="/form1" replace /> : <LandingPage />} />
+
+        <Route path="/form1" element={
+          <SignedIn>
+            <Form1 />
+          </SignedIn>
+        } />
+        
 
         <Route path="/dashboard" element={
           <SignedIn>
