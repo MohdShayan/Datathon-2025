@@ -6,6 +6,7 @@ import Dashboard from './components/Dashboard';
 import Analytics from './components/Analytics';
 import Locations from './components/Locations';
 import Form1 from './components/Form1';
+import TestingSupa from './components/TestingSupa.jsx';
 
 import LandingPage from './components/LandingPage';
 
@@ -30,6 +31,11 @@ function App() {
         <Route path="/form1" element={
           <SignedIn>
             <Form1 />
+          </SignedIn>
+        } />
+        <Route path="/data" element={
+          <SignedIn>
+            <TestingSupa />
           </SignedIn>
         } />
         
