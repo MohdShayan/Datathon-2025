@@ -1,7 +1,7 @@
 import React from 'react';
 import { SignInButton } from '@clerk/clerk-react';
 import { BarChart3, Users, MapPin, TrendingUp, ArrowRight } from 'lucide-react';
-
+import logo from "../../image.png"
 const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
@@ -10,8 +10,8 @@ const LandingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center">
-              <BarChart3 className="h-8 w-8 text-indigo-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">SupaRetail</span>
+              <img src={logo} alt="" className='w-12 h-12' />
+              <span className="ml-3 mb-2 text-2xl font-bold text-gray-900">SupaRetail</span>
             </div>
             <SignInButton mode="modal">
               <button className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
