@@ -192,7 +192,7 @@ const Forecast: React.FC = () => {
           <input
             type="number"
             value={days}
-            onChange={(e) => setDays(parseInt(e.target.value, 10) || 1)}
+            onChange={(e) => setDays(parseInt(e.target.value, 10)|| 0)}
             min="1"
             max="365"
             className="border border-gray-300 rounded-md p-2 w-24"

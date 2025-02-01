@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, BarChart2, MapPin, Settings as SettingsIcon, LogOut } from 'lucide-react';
+import { LayoutDashboard, BarChart2, MapPin,Wrench, Settings as SettingsIcon, LogOut } from 'lucide-react';
 import { useUser, useClerk } from '@clerk/clerk-react';
 import logo from "../../image.png"
 const Layout: React.FC = () => {
@@ -88,7 +88,8 @@ const Layout: React.FC = () => {
               }`
             }
           >
-            <MapPin className="h-5 w-5 mr-3" />
+            
+            <Wrench className="h-5 w-5 mr-3"/>
             Services
           </NavLink>
           {userRole === 'admin' && (
