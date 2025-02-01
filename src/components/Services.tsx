@@ -5,7 +5,7 @@ import { BarChart, Gift, ShoppingCart } from "lucide-react";
 const Services: React.FC = () => {
   const navigate = useNavigate();
 
-  // Define services array with proper types
+  
   const services: { id: number; name: string; icon: JSX.Element; description: string; path: string }[] = [
     {
       id: 1,
@@ -30,7 +30,7 @@ const Services: React.FC = () => {
     },
   ];
 
-  // Ensure TypeScript understands `path` is always a string
+
   const handleNavigate = (path: string) => {
     navigate(path);
   };

@@ -23,6 +23,7 @@ import LandingPage from './components/LandingPage';
 
 function App() {
   const { isSignedIn, user } = useUser();
+  console.log(user);
 
   return (
     <BrowserRouter>
