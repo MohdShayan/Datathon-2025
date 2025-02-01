@@ -86,7 +86,7 @@ export default function Form1() {
             </LabelInputContainer>
 
             <button
-              className="bg-gradient-to-br mt-4 relative group/btn from-blue-500 dark:from-blue-500 dark:to-blue-800 to-blue-900 block dark:bg-blue-600 w-full text-white rounded-md h-10 font-bold shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+              className="bg-gradient-to-br mt-4 relative group/btn from-blue-500 dark:from-blue-500 dark:to-blue-800 to-blue-900 block dark:bg-blue-600 w-full text-white rounded-md h-10 font-bold shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)inset,0px-1px_0px_0px_var(--zinc-800)_inset]"
               type="submit"
             >
               Submit &rarr;
