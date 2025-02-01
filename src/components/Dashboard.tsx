@@ -10,7 +10,7 @@ const Dashboard: React.FC = () => {
   const userRole = user?.publicMetadata.role as string;
 
   const handleExport = () => {
-    // Implement export functionality
+    
     console.log('Exporting data...');
   };
 
