@@ -6,7 +6,8 @@ import Dashboard from './components/Dashboard';
 import Analytics from './components/Analytics';
 import Locations from './components/Locations';
 import Form1 from './components/Form1';
-import TestingSupa from './components/TestingSupa.jsx';
+import Services from './components/Services';
+import Forecast from './components/Forecast';
 
 import LandingPage from './components/LandingPage';
 
@@ -52,6 +53,8 @@ function App() {
             
           } />
           <Route path="locations" element={<Locations />} />  
+          <Route path="services" element={<Services />} />  
+          <Route path="sales-prediction" element={<Forecast />} />  
           
         </Route>
       </Routes>

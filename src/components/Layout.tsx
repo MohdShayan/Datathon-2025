@@ -77,6 +77,20 @@ const Layout: React.FC = () => {
             <MapPin className="h-5 w-5 mr-3" />
             Locations
           </NavLink>
+
+          <NavLink
+            to="/dashboard/services"
+            className={({ isActive }) =>
+              `flex items-center px-4 py-2 rounded-lg mb-2 ${
+                isActive
+                  ? 'bg-indigo-50 text-indigo-600'
+                  : 'text-gray-600 hover:bg-gray-50'
+              }`
+            }
+          >
+            <MapPin className="h-5 w-5 mr-3" />
+            Services
+          </NavLink>
           {userRole === 'admin' && (
             <NavLink
               to="/dashboard/settings"
