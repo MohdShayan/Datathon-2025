@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, BarChart2, MapPin, Settings as SettingsIcon, LogOut } from 'lucide-react';
 import { useUser, useClerk } from '@clerk/clerk-react';
-
+import logo from "../../image.png"
 const Layout: React.FC = () => {
   const { user } = useUser();
   const { signOut } = useClerk();
@@ -19,7 +19,7 @@ const Layout: React.FC = () => {
       {/* Sidebar */}
       <div className="w-64 bg-white shadow-lg">
         <div className="h-16 flex items-center px-6 border-b">
-          <h1 className="text-xl font-bold text-indigo-600">Retail Analytics</h1>
+          <h1 className="text-xl font-bold text-blue-700 flex justify-center items-center gap-2"> <img src={logo} alt="" className='w-10 h-10' /> SupaRetail</h1>
         </div>
         <div className="p-4 border-b">
           <div className="flex items-center">
@@ -36,7 +36,7 @@ const Layout: React.FC = () => {
         </div>
         <nav className="p-4">
           <NavLink
-            to="/"
+            to="/dashboard"
             end
             className={({ isActive }) =>
               `flex items-center px-4 py-2 rounded-lg mb-2 ${
@@ -49,9 +49,9 @@ const Layout: React.FC = () => {
             <LayoutDashboard className="h-5 w-5 mr-3" />
             Dashboard
           </NavLink>
-          {(userRole === 'analyst' || userRole === 'admin') && (
+         
             <NavLink
-              to="/analytics"
+              to="/dashboard/analytics"
               className={({ isActive }) =>
                 `flex items-center px-4 py-2 rounded-lg mb-2 ${
                   isActive
@@ -63,9 +63,9 @@ const Layout: React.FC = () => {
               <BarChart2 className="h-5 w-5 mr-3" />
               Analytics
             </NavLink>
-          )}
+         
           <NavLink
-            to="/locations"
+            to="/dashboard/locations"
             className={({ isActive }) =>
               `flex items-center px-4 py-2 rounded-lg mb-2 ${
                 isActive
