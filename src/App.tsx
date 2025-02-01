@@ -34,11 +34,6 @@ function App() {
             <Form1 />
           </SignedIn>
         } />
-        <Route path="/data" element={
-          <SignedIn>
-            <TestingSupa />
-          </SignedIn>
-        } />
         
 
         <Route path="/dashboard" element={
