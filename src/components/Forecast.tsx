@@ -79,10 +79,10 @@ import {
   Legend,
 } from "chart.js";
 
-// Register Chart.js components
+
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-// Define TypeScript types
+
 interface ForecastData {
   dates: string[];
   forecast: number[];
@@ -131,8 +131,8 @@ const Forecast: React.FC = () => {
       {
         label: "Predicted Sales",
         data: forecast.forecast,
-        borderColor: "rgba(79, 70, 229, 1)", // Indigo-600
-        backgroundColor: "rgba(79, 70, 229, 0.2)", // Indigo-600 with opacity
+        borderColor: "rgba(79, 70, 229, 1)", 
+        backgroundColor: "rgba(79, 70, 229, 0.2)", 
         tension: 0.3,
       },
     ],
@@ -164,7 +164,7 @@ const Forecast: React.FC = () => {
     <div className="p-8 bg-gray-50 min-h-screen">
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Sales Forecast</h2>
 
-      {/* File Upload Section */}
+      
       <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">Upload Dataset</h3>
         <div className="flex items-center gap-4">
@@ -184,7 +184,7 @@ const Forecast: React.FC = () => {
         {uploadMessage && <p className="mt-4 text-sm text-gray-600">{uploadMessage}</p>}
       </div>
 
-      {/* Forecasting Section */}
+      
       <div className="mb-8 p-6 bg-white rounded-lg shadow-md">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">Generate Forecast</h3>
         <div className="flex items-center gap-4">
@@ -206,7 +206,7 @@ const Forecast: React.FC = () => {
         </div>
       </div>
 
-      {/* Chart Display */}
+      
       <div className="p-6 bg-white rounded-lg shadow-md">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">Forecast Chart</h3>
         <div className="w-full h-96">
