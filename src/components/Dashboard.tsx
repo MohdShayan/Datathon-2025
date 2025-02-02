@@ -25,16 +25,16 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-black motion-preset-focus motion-duration-800  text-white">
       {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <header className="bg-white shadow-sm motion-preset-slide-down-lg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 bg-black">
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Welcome {user?.firstName}!</h1>
-              <p className="text-sm text-gray-500">Here's what's happening with your stores today.</p>
+              <h1 className="text-2xl font-bold text-white">Welcome {user?.firstName}!</h1>
+              <p className="text-sm text-gray-200">Here's what's happening with your stores today.</p>
             </div>
-            <div className="flex items-center space-x-4">
+            {/* <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <Filter className="h-5 w-5 text-gray-400" />
                 <select 
@@ -67,17 +67,17 @@ const Dashboard: React.FC = () => {
                   Export Report
                 </button>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 motion-preset-slide-up-md">
         {/* KPI Cards */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-8">
           <KPICard 
-            title="Total Sales"
+            title="Profit Score for Store Category"
             value="$184,000"
             icon={<BarChart3 className="h-6 w-6 text-indigo-600" />}
             trend="+12.5%"
@@ -91,7 +91,7 @@ const Dashboard: React.FC = () => {
             isLoading={false}
           />
           <KPICard 
-            title="Store Locations"
+            title="Profit Score for Store Location"
             value="3"
             icon={<MapPin className="h-6 w-6 text-blue-600" />}
             trend="Active"
@@ -107,9 +107,9 @@ const Dashboard: React.FC = () => {
         </div>
 
         {/* Predictions Table */}
-        <div className="bg-white shadow rounded-lg p-6 mb-8">
+        <div className="bg-white/90 shadow rounded-lg p-6 mb-8">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-lg font-semibold text-gray-900">Sales Predictions</h2>
+            <h2 className="text-xl font-bold text-gray-900">Sales Predictions</h2>
             <div className="flex items-center space-x-2">
               <button
                 onClick={() => {/* Implement refresh */}}
@@ -164,7 +164,7 @@ interface KPICardProps {
 }
 
 const KPICard: React.FC<KPICardProps> = ({ title, value, icon, trend, isLoading }) => (
-  <div className="bg-white overflow-hidden shadow rounded-lg hover:shadow-md transition-shadow">
+  <div className="bg-white/90 hover:bg-white overflow-hidden shadow rounded-lg hover:shadow-md transition-shadow">
     <div className="p-5">
       <div className="flex items-center">
         <div className="flex-shrink-0">
