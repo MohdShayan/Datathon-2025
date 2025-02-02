@@ -15,11 +15,11 @@ const Layout: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-screen bg-black text-white">
       {/* Sidebar */}
-      <div className="w-64 bg-white shadow-lg">
+      <div className="w-64 bg-black shadow-lg">
         <div className="h-16 flex items-center px-6 border-b">
-          <h1 className="text-xl font-bold text-blue-700 flex justify-center items-center gap-2"> <img src={logo} alt="" className='w-10 h-10' /> SupaRetail</h1>
+          <h1 className="text-xl font-bold text-zinc-100 flex justify-center items-center gap-2"> <img src={logo} alt="" className='w-10 h-10' /> SupaRetail</h1>
         </div>
         <div className="p-4 border-b">
           <div className="flex items-center">
@@ -29,8 +29,8 @@ const Layout: React.FC = () => {
               className="h-10 w-10 rounded-full"
             />
             <div className="ml-3">
-              <p className="text-sm font-medium text-gray-700">{user?.fullName}</p>
-              <p className="text-xs text-gray-500 capitalize">{userRole}</p>
+              <p className="text-sm font-medium text-gray-200">{user?.fullName}</p>
+              <p className="text-xs text-gray-200 capitalize">{userRole}</p>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@ const Layout: React.FC = () => {
               `flex items-center px-4 py-2 rounded-lg mb-2 ${
                 isActive
                   ? 'bg-indigo-50 text-indigo-600'
-                  : 'text-gray-600 hover:bg-gray-50'
+                  : 'text-gray-100 hover:bg-gray-50 hover:text-gray-700'
               }`
             }
           >
@@ -56,7 +56,7 @@ const Layout: React.FC = () => {
                 `flex items-center px-4 py-2 rounded-lg mb-2 ${
                   isActive
                     ? 'bg-indigo-50 text-indigo-600'
-                    : 'text-gray-600 hover:bg-gray-50'
+                    : 'text-gray-100 hover:bg-gray-50 hover:text-gray-700'
                 }`
               }
             >
@@ -70,7 +70,7 @@ const Layout: React.FC = () => {
               `flex items-center px-4 py-2 rounded-lg mb-2 ${
                 isActive
                   ? 'bg-indigo-50 text-indigo-600'
-                  : 'text-gray-600 hover:bg-gray-50'
+                  : 'text-gray-100 hover:bg-gray-50 hover:text-gray-700'
               }`
             }
           >
@@ -84,7 +84,7 @@ const Layout: React.FC = () => {
               `flex items-center px-4 py-2 rounded-lg mb-2 ${
                 isActive
                   ? 'bg-indigo-50 text-indigo-600'
-                  : 'text-gray-600 hover:bg-gray-50'
+                  : 'text-gray-100  hover:bg-gray-50 hover:text-gray-700'
               }`
             }
           >

@@ -8,18 +8,9 @@ import Locations from './components/Locations';
 import Form1 from './components/Form1';
 import Services from './components/Services';
 import Forecast from './components/Forecast';
-
+import LocationModel from './components/locationModel';
+import ProfitScoreComponent from './components/ValueModel';
 import LandingPage from './components/LandingPage';
-
-// function PrivateRoute({ children, requiredRole }: { children: React.ReactNode, requiredRole?: 'admin' | 'analyst' }) {
-//   const { user } = useUser();
-//   const userRole = user?.publicMetadata.role as string;
-
-//   if (!requiredRole || userRole === requiredRole) {
-//     return <>{children}</>;
-//   }
-//   return <Navigate to="/" replace />;
-// }
 
 function App() {
   const { isSignedIn, user } = useUser();
@@ -35,7 +26,16 @@ function App() {
             <Form1 />
           </SignedIn>
         } />
-        
+        <Route path="/locationbased" element={
+          <SignedIn>
+            <LocationModel />
+          </SignedIn>
+        } />
+        <Route path="/typebased" element={
+          <SignedIn>
+            <ProfitScoreComponent />
+          </SignedIn>
+        } />
 
         <Route path="/dashboard" element={
           <SignedIn>
@@ -43,15 +43,11 @@ function App() {
           </SignedIn>
         }>
           <Route index element={<Dashboard />} />
-          <Route path="analytics" element={
-           
-              <Analytics />
-            
-          } />
-          <Route path="locations" element={<Locations />} />  
-          <Route path="services" element={<Services />} />  
-          <Route path="sales-prediction" element={<Forecast />} />  
-          
+          <Route path="analytics" element={<Analytics />} />
+          <Route path="locations" element={<Locations />} />
+          <Route path="services" element={<Services />} />
+          <Route path="sales-prediction" element={<Forecast />} />
+
         </Route>
       </Routes>
     </BrowserRouter>
