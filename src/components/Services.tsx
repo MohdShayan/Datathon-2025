@@ -19,28 +19,32 @@ const Services: React.FC = () => {
       name: "Personalised Offer",
       icon: <Gift className="h-5 w-5 text-indigo-600 mr-2" />,
       description: "Create tailored offers for your customers.",
-      path: "/personalised-offer",
+      path: "/dashboard/personalised-offer",
     },
     {
       id: 3,
       name: "Outlet Preference",
       icon: <ShoppingCart className="h-5 w-5 text-indigo-600 mr-2" />,
       description: "Analyze customer preferences across outlets.",
-      path: "/outlet-preference",
+      path: "/dashboard/storeclassifier",
     },
   ];
 
 
   const handleNavigate = (path: string) => {
-    navigate(path);
+    if (path === "/dashboard/personalised-offer") {
+      window.location.href = "https://wa.me/14155238886";
+    } else {
+      navigate(path);
+    }
   };
 
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold text-gray-900 mb-8">Our Services</h1>
+      <h1 className="text-2xl font-bold text-gray-100 mb-8 motion-preset-expand">Our Services</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service) => (
-          <div key={service.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+          <div key={service.id} className="bg-white/90 hover:bg-white transition-all motion-bg-in-blue-300 motion-duration-1000 motion-preset-slide-left-lg rounded-lg shadow-md overflow-hidden">
             <div className="p-6">
               <div className="flex items-center mb-4">
                 {service.icon}

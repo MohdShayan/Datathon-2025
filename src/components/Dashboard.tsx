@@ -25,9 +25,9 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black motion-preset-focus motion-duration-800  text-white">
       {/* Header */}
-      <header className="bg-white shadow-sm">
+      <header className="bg-white shadow-sm motion-preset-slide-down-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 bg-black">
           <div className="flex justify-between items-center">
             <div>
@@ -73,11 +73,11 @@ const Dashboard: React.FC = () => {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 motion-preset-slide-up-md">
         {/* KPI Cards */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 mb-8">
           <KPICard 
-            title="Total Sales"
+            title="Profit Score for Store Category"
             value="$184,000"
             icon={<BarChart3 className="h-6 w-6 text-indigo-600" />}
             trend="+12.5%"
@@ -91,7 +91,7 @@ const Dashboard: React.FC = () => {
             isLoading={false}
           />
           <KPICard 
-            title="Store Locations"
+            title="Profit Score for Store Location"
             value="3"
             icon={<MapPin className="h-6 w-6 text-blue-600" />}
             trend="Active"

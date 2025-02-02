@@ -124,13 +124,13 @@ export default function Form1() {
   };
 
   return (
-    <div className="flex justify-center items-center py-20 bg-blue-100">
-      <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
-        <h2 className="font-bold flex gap-2 justify-center items-center text-xl text-neutral-800 dark:text-neutral-200">
+    <div className="flex justify-center items-center py-20 bg-black">
+      <div className="max-w-md w-full mx-auto rounded-2xl md:rounded-2xl p-4 md:p-8 shadow-input border dark:bg-black motion-preset-pop">
+        <h2 className="font-bold flex gap-2 justify-center items-center text-xl text-neutral-200 dark:text-neutral-200">
           Welcome to <img src={logo} alt="" className="w-10 h-10" />{" "}
-          <span className="text-blue-700 font-bold text-2xl">SupaRetail</span>
+          <span className="text-blue-500 font-bold text-2xl">SupaRetail</span>
         </h2>
-        <p className="text-neutral-600 text-sm max-w-sm my-6 dark:text-neutral-300 flex gap-2 justify-center items-center">
+        <p className="text-neutral-300 text-sm max-w-sm my-6 dark:text-neutral-300 flex gap-2 justify-center items-center">
          <em>
           Please fill in the form below to get started.
          </em>
@@ -143,22 +143,22 @@ export default function Form1() {
           <form className="my-2" onSubmit={handleSubmit}>
             <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
               <LabelInputContainer>
-                <Label htmlFor="shop">Shop name</Label>
+                <Label htmlFor="shop" className="text-gray-300">Shop name</Label>
                 <Input id="shop" placeholder="eg., SupaStore" type="text" required className="focus:bg-blue-100"/>
               </LabelInputContainer>
               <LabelInputContainer>
-                <Label htmlFor="category">Shop Category</Label>
+                <Label htmlFor="category" className="text-gray-300">Shop Category</Label>
                 <Input id="category" placeholder="eg., Grocery" type="text" required className="focus:bg-blue-100"/>
               </LabelInputContainer>
             </div>
             <LabelInputContainer className="mb-4">
-              <Label htmlFor="size">Shop size</Label>
+              <Label htmlFor="size" className="text-gray-300">Shop size</Label>
               <Input id="size" placeholder="eg., Small, Medium, Large" type="text" required 
               className="focus:bg-blue-100"/>
             </LabelInputContainer>
 
             <LabelInputContainer className="mb-4">
-              <Label htmlFor="area">Area</Label>
+              <Label htmlFor="area" className="text-gray-300">Area</Label>
               <Input
                 id="area"
                 placeholder="eg., Bandra West"
@@ -170,7 +170,7 @@ export default function Form1() {
               />
             </LabelInputContainer>
             <LabelInputContainer className="mb-4">
-              <Label htmlFor="city">City</Label>
+              <Label htmlFor="city" className="text-gray-300">City</Label>
               <Input
                 id="city"
                 placeholder="eg., Mumbai"
@@ -182,7 +182,7 @@ export default function Form1() {
               />
             </LabelInputContainer>
             <LabelInputContainer className="mb-4">
-              <Label htmlFor="state">State</Label>
+              <Label htmlFor="state"  className="text-gray-300">State</Label>
               <Input
                 id="state"
                 placeholder="eg., Maharashtra"

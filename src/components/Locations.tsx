@@ -5,11 +5,11 @@ import logo from "../../image.png"
 const Locations: React.FC = () => {
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold text-gray-900 mb-8">Store Locations</h1>
+      <h1 className="text-2xl font-bold text-gray-200 mb-8 motion-preset-expand">Store Locations</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {mockLocations.map((location) => (
-          <div key={location.id} className="bg-white/80 rounded-lg shadow-md overflow-hidden">
+          <div key={location.id} className="bg-white/80 rounded-lg shadow-md overflow-hidden motion-preset-slide-up-lg">
             <div className="h-48 bg-gray-200 relative">
               <img
                 src={logo}

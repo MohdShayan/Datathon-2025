@@ -1,42 +1,4 @@
 
-# from flask import Flask, jsonify, request
-# from flask_cors import CORS
-# import pandas as pd
-# from statsmodels.tsa.arima.model import ARIMA
-
-# app = Flask(__name__)
-# CORS(app)
-
-# def load_sales_data(filepath):
-#     df = pd.read_csv(filepath)
-#     df["Date"] = pd.to_datetime(df["Date"], format="%d-%m-%Y", errors="coerce")
-#     df = df.dropna(subset=["Date"])
-#     sales_data = df.groupby("Date")["Total Bill"].sum()
-#     return sales_data
-
-# def forecast_sales(data, steps=30):
-#     model = ARIMA(data, order=(1, 0, 2))  # Adjust ARIMA parameters as needed
-#     fitted_model = model.fit()
-#     forecast = fitted_model.get_forecast(steps=steps)
-    
-#     forecast_index = pd.date_range(start=data.index[-1], periods=steps + 1, freq="D")[1:]
-#     forecast_values = forecast.predicted_mean.tolist()
-    
-#     return {"dates": forecast_index.strftime("%Y-%m-%d").tolist(), "forecast": forecast_values}
-
-# @app.route("/forecast", methods=["GET"])
-# def get_forecast():
-#     dataset_path = "Datasetttttttt1.csv"
-#     sales_data = load_sales_data(dataset_path)
-
-#     # Get forecast days from the frontend
-#     days = int(request.args.get("days", 30))  # Default to 30 days if not provided
-#     forecast_result = forecast_sales(sales_data, steps=days)
-
-#     return jsonify(forecast_result)
-
-# if __name__ == "__main__":
-#     app.run(debug=True)
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os

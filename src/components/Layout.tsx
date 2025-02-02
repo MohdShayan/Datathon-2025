@@ -15,13 +15,13 @@ const Layout: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen bg-black text-white">
+    <div className="flex h-screen bg-black text-white ">
       {/* Sidebar */}
-      <div className="w-64 bg-black shadow-lg">
+      <div className="w-64 bg-black shadow-lg motion-preset-slide-right-lg">
         <div className="h-16 flex items-center px-6 border-b">
           <h1 className="text-xl font-bold text-zinc-100 flex justify-center items-center gap-2"> <img src={logo} alt="" className='w-10 h-10' /> SupaRetail</h1>
         </div>
-        <div className="p-4 border-b">
+        <div className="py-4 pl-10 border-b">
           <div className="flex items-center">
             <img
               src={user?.imageUrl}
@@ -39,7 +39,7 @@ const Layout: React.FC = () => {
             to="/dashboard"
             end
             className={({ isActive }) =>
-              `flex items-center px-4 py-2 rounded-lg mb-2 ${
+              `flex items-center px-4 py-2 rounded-lg mb-2 motion-preset-slide-right-md motion-duration-1000 ${
                 isActive
                   ? 'bg-indigo-50 text-indigo-600'
                   : 'text-gray-100 hover:bg-gray-50 hover:text-gray-700'
@@ -53,7 +53,7 @@ const Layout: React.FC = () => {
             <NavLink
               to="/dashboard/analytics"
               className={({ isActive }) =>
-                `flex items-center px-4 py-2 rounded-lg mb-2 ${
+                `flex motion-preset-slide-right-md motion-duration-1000 items-center px-4 py-2 rounded-lg mb-2 ${
                   isActive
                     ? 'bg-indigo-50 text-indigo-600'
                     : 'text-gray-100 hover:bg-gray-50 hover:text-gray-700'
@@ -67,7 +67,7 @@ const Layout: React.FC = () => {
           <NavLink
             to="/dashboard/locations"
             className={({ isActive }) =>
-              `flex items-center px-4 py-2 rounded-lg mb-2 ${
+              `flex motion-preset-slide-right-md motion-duration-1000 items-center px-4 py-2 rounded-lg mb-2 ${
                 isActive
                   ? 'bg-indigo-50 text-indigo-600'
                   : 'text-gray-100 hover:bg-gray-50 hover:text-gray-700'
@@ -81,7 +81,7 @@ const Layout: React.FC = () => {
           <NavLink
             to="/dashboard/services"
             className={({ isActive }) =>
-              `flex items-center px-4 py-2 rounded-lg mb-2 ${
+              `flex motion-preset-slide-right-md motion-duration-1000 items-center px-4 py-2 rounded-lg mb-2 ${
                 isActive
                   ? 'bg-indigo-50 text-indigo-600'
                   : 'text-gray-100  hover:bg-gray-50 hover:text-gray-700'
@@ -96,9 +96,9 @@ const Layout: React.FC = () => {
             <NavLink
               to="/dashboard/settings"
               className={({ isActive }) =>
-                `flex items-center px-4 py-2 rounded-lg mb-2 ${
+                `flex motion-preset-slide-right-md motion-duration-1000 items-center px-4 py-2 rounded-lg mb-2 ${
                   isActive
-                    ? 'bg-indigo-50 text-indigo-600'
+                    ? 'bg-indigo-50 text-blue-700'
                     : 'text-gray-600 hover:bg-gray-50'
                 }`
               }
@@ -111,7 +111,7 @@ const Layout: React.FC = () => {
         <div className="absolute bottom-0 w-64 p-4 border-t">
           <button
             onClick={handleSignOut}
-            className="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg w-full"
+            className="flex items-center px-4 py-2 text-gray-100 hover:bg-gray-50 hover:text-gray-800 rounded-lg w-full motion-preset-slide-up-md"
           >
             <LogOut className="h-5 w-5 mr-3" />
             Logout

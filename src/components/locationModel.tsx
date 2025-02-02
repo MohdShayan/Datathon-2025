@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { NumberTicker } from './ui/number-ticker';
+import axios from 'axios';
 
 interface Location {
   name: string;
@@ -20,18 +22,18 @@ const ProfitScoreByLocationComponent: React.FC = () => {
   const navigate = useNavigate();
 
   const getScoreLabel = (score: number): string => {
-    if (score >= 80) {
-      return 'HIGH CHANCE of Profit';
-    } else if (score >= 50) {
-      return 'MODERATE CHANCE of Profit';
+    if (score >= 10) {
+      return 'Customer of city come here';
+    } else if (score < 10) {
+      return 'Customer of city come here';
     } else {
       return 'LOW CHANCE of Profit';
     }
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-blue-200">
-      <div className="bg-white rounded-lg shadow-lg p-8 w-80 text-center relative">
+    <div className="flex justify-center items-center h-screen bg-black">
+      <div className="bg-white/90 hover:bg-white motion-preset-expand rounded-lg shadow-lg p-8 w-80 text-center relative">
         <em>
           <h2 className="text-md font-semibold pb-4">
             Check Your Profit score on your preferred location
@@ -40,15 +42,22 @@ const ProfitScoreByLocationComponent: React.FC = () => {
         <div className="flex justify-center items-center mb-4 flex-col">
           <h2 className="text-2xl font-extrabold text-gray-800">Profit Score</h2>
           <div className="flex justify-center items-baseline">
-            <div className="text-5xl font-bold text-blue-700">{selectedLocation.score}</div>
-            <div className="text-xl ml-2 text-gray-800">/100</div>
+            <div className="text-3xl font-bold text-blue-700">
+            <NumberTicker
+
+      value={selectedLocation.score}
+      decimalPlaces={2}
+      className="whitespace-pre-wrap text-8xl font-medium tracking-tighter text-black dark:text-white"
+    />
+            </div>
+            <div className="text-xl ml-2 text-gray-800">%</div>
           </div>
         </div>
         <div
           className={`text-xl font-semibold mt-4 ${
-            selectedLocation.score >= 80
+            selectedLocation.score >= 10
               ? 'text-green-600'
-              : selectedLocation.score >= 50
+              : selectedLocation.score < 10
               ? 'text-yellow-500'
               : 'text-red-600'
           }`}
@@ -57,7 +66,7 @@ const ProfitScoreByLocationComponent: React.FC = () => {
         </div>
 
         {/* Conditionally render "View Other Locations" button */}
-        {selectedLocation.score < 91 && (
+        {selectedLocation.score < 10 && (
           <button
             className="mt-4 px-2 py-2 bg-blue-500 hover:bg-blue-600 transition-all text-white rounded-md text-lg focus:outline-none font-bold"
             onClick={() => {

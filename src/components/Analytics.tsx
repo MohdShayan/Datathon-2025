@@ -39,13 +39,13 @@ const salesData = [
 const Analytics: React.FC = () => {
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold text-gray-900 mb-8">Analytics</h1>
+      <h1 className="text-2xl font-bold text-gray-100 mb-8 motion-preset-expand">Analytics</h1>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Sales Trend */}
-        <div className="bg-black p-6 rounded-lg shadow">
+        <div className="bg-black p-6 rounded-lg shadow border ">
           <h2 className="text-xl font-bold mb-4">Sales Trend</h2>
-          <div className="h-80">
+          <div className="h-80  motion-blur-in motion-delay-70000">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={salesData} >
                 <CartesianGrid strokeDasharray="3 3" />
@@ -66,9 +66,9 @@ const Analytics: React.FC = () => {
         </div>
 
         {/* Category Distribution */}
-    <div className="bg-black p-6 rounded-lg shadow">
+    <div className="bg-black p-6 rounded-lg shadow border">
       <h2 className="text-xl font-bold mb-4">Category Distribution</h2>
-      <div className="h-80">
+      <div className="h-80 motion-blur-in motion-delay-70000">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
@@ -79,7 +79,7 @@ const Analytics: React.FC = () => {
               label={({ name, percent }) =>
                 `${name} ${(percent * 100).toFixed(0)}%`
               }
-              outerRadius={80}
+              outerRadius={80 }
               fill="#8884d8"
               dataKey="value"
             >
@@ -97,9 +97,9 @@ const Analytics: React.FC = () => {
     </div>
 
         {/* Monthly Performance */}
-        <div className="bg-black p-6 rounded-lg shadow lg:col-span-2">
+        <div className="bg-black p-6 rounded-lg shadow lg:col-span-2 border">
           <h2 className="text-lg font-semibold mb-4">Monthly Performance</h2>
-          <div className="h-80">
+          <div className="h-80 motion-blur-in motion-delay-70000">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={salesData}>
                 <CartesianGrid strokeDasharray="3 3" />

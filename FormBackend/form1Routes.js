@@ -1,7 +1,7 @@
 import express from "express";
 import FORM1 from "./form1Model.js";
 const router = express.Router();
-
+const app = express();
 router.post("/form1", async (req, res) => {
   const { shopName, shopCategory, shopSize, shopLocation, createdBy } =
     req.body;
@@ -41,6 +41,9 @@ router.get("/form1", async (req, res) => {
       .status(500)
       .json({ message: "An error occurred while fetching forms." });
   }
+});
+app.listen(3001, () => {
+  console.log('Server running on port 3000');
 });
 
 export default router;

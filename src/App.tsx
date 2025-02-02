@@ -11,7 +11,7 @@ import Forecast from './components/Forecast';
 import LocationModel from './components/locationModel';
 import ProfitScoreComponent from './components/ValueModel';
 import LandingPage from './components/LandingPage';
-
+import StoreClassifier from './components/StoreClassifier';
 function App() {
   const { isSignedIn, user } = useUser();
   console.log(user);
@@ -47,6 +47,8 @@ function App() {
           <Route path="locations" element={<Locations />} />
           <Route path="services" element={<Services />} />
           <Route path="sales-prediction" element={<Forecast />} />
+          <Route path="storeclassifier" element={<StoreClassifier />} />
+
 
         </Route>
       </Routes>
